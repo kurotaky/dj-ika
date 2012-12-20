@@ -1,0 +1,22 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    cinch (2.0.3)
+    httparty (0.9.0)
+      multi_json (~> 1.0)
+      multi_xml
+    itunes-search-api (0.1.0)
+      httparty
+    multi_json (1.5.0)
+    multi_xml (0.5.1)
+    net-irc (0.0.9)
+    string-irc (0.2.3)
+      net-irc (~> 0.0.9)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  cinch
+  itunes-search-api
+  string-irc
