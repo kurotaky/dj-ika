@@ -11,7 +11,7 @@ class HelloPlugin
   timer 60 * 10, method: :say_hello
   def say_hello
     say_hey = StringIrc.new('YO YO')
-    Channel("#music").notice say_hey.red
+    Channel([config["channel"]]).notice say_hey.red
   end
 end
 
@@ -19,7 +19,7 @@ bot = Cinch::Bot.new do
   configure do |c|
     c.nick            = "DJ_IKA"
     c.server          = config["hostname"]
-    c.channels        = ["#music"]
+    c.channels        = [config["channel"]]
     c.plugins.plugins = [HelloPlugin]
     c.ssl.use         = true
     c.port            = config["port"]
